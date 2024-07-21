@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: fixed;
+    padding: 20px; /* Added for better visibility */    
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px; 
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-app h2{
+    color: #333;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;    
+}
+
+.todo-app img{
+    width: 40px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;   
+    margin-bottom: 25px;
+
+}
+
+input{
+    flex: 1;  /*it will take the remaining space */
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+}
+
+button{
+    background-color: #9306ff;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;  /*to prevent text selection */
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    background-image:url('images/unchecked.png');
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:6px;   /*to center the circle */
+    left: 8px; /*to center the circle */
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+
+ul li.checked::before{
+    background-image:url('images/checked.png');
+}
